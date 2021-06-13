@@ -33,4 +33,4 @@ jobs:
         run: echo "Hello ${{ github.event.inputs.name }}"
         
       - name: Check the log
-        run: echo "Hello ${{ git log --oneline }} ${{git branch}}"
+        run: echo "Hello ${{ github.log --oneline }} ${{github.branch}}"

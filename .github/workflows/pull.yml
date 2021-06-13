@@ -1,0 +1,16 @@
+name: Rebase test
+on:
+  push:
+
+jobs:
+  rebase_branches:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Rebase head_branch on base_ref
+        # Recommended: specify a version such as `@v1.0` rather than `@main`
+        uses: rohit-web/gitapis@main
+        with:
+          # Head branch, which will be rebased onto the base_ref.
+          head_branch: bug-1
+          # Branch, or Git ref, that the head_branch will be rebased onto.
+          base_ref: my-rebase-upstream-ref-or-branch

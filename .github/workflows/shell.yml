@@ -13,4 +13,7 @@ jobs:
     name: Ubuntu OS setup
     runs-on: ubuntu-latest
     steps:
-      - run: ./actions.sh
+      - run: |
+          chmod +x "${GITHUB_WORKSPACE}/actions.sh"
+
+          "${GITHUB_WORKSPACE}/actions.sh"
